@@ -9,3 +9,8 @@ https://code.msdn.microsoft.com/windowsdesktop/Writing-type-visualizers-2eae77a2
 # to install:
 copy.bat
 
+# To Do
+Adapt the autoexp.dat stlport visualisers to natvis format.
+File per container approach
+
+
