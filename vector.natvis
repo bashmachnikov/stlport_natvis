@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+<Type Name="stlp_std::priv::_Vector_base&lt;*&gt;">
+    <DisplayString>{{ size={_M_finish - _M_start} }, {_M_start[0]}, {_M_start[1]}, {_M_start[2]}, {"..."}}</DisplayString>
+    <Expand>
+        <Item Name="[size]">_M_finish - _M_start</Item>        
+        <ArrayItems>
+            <Size>_M_finish - _M_start</Size>
+            <ValuePointer>_M_start</ValuePointer>
+        </ArrayItems>
+    </Expand>
+</Type>
+
+</AutoVisualizer>
