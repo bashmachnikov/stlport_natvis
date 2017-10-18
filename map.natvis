@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+  <Type Name="stlpmtx_std::map&lt;*&gt;">
+    <AlternativeType Name="stlp_std::map&lt;*&gt;" />
+    <AlternativeType Name="stlpx_std::map&lt;*&gt;" />
+    <AlternativeType Name="stlpxmtx_std::map&lt;*&gt;" />
+    <AlternativeType Name="stlp_std::multimap&lt;*&gt;" />
+    <AlternativeType Name="stlpx_std::multimap&lt;*&gt;" />
+    <AlternativeType Name="stlpmtx_std::multimap&lt;*&gt;" />
+    <AlternativeType Name="stlpxmtx_std::multimap&lt;*&gt;" />
+    <AlternativeType Name="stlp_std::set&lt;*&gt;" />
+    <AlternativeType Name="stlpx_std::set&lt;*&gt;" />
+    <AlternativeType Name="stlpmtx_std::set&lt;*&gt;" />
+    <AlternativeType Name="stlpxmtx_std::set&lt;*&gt;" />
+    <AlternativeType Name="stlp_std::multiset&lt;*&gt;" />
+    <AlternativeType Name="stlpx_std::multiset&lt;*&gt;" />
+    <AlternativeType Name="stlpmtx_std::multiset&lt;*&gt;" />
+    <AlternativeType Name="stlpxmtx_std::multiset&lt;*&gt;" />
+    <DisplayString>{{ size = {_M_t._M_node_count} }}</DisplayString>
+    <Expand>
+      <Item Name="[size]">_M_t._M_node_count</Item>
+      <Item Name="[tree]">_M_t</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="stlpdmtx_std::map&lt;*&gt;">
+    <AlternativeType Name="stlpd_std::map&lt;*&gt;" />
+    <AlternativeType Name="stlpdx_std::map&lt;*&gt;" />
+    <AlternativeType Name="stlpdxmtx_std::map&lt;*&gt;" />
+    <AlternativeType Name="stlpd_std::multimap&lt;*&gt;" />
+    <AlternativeType Name="stlpdx_std::multimap&lt;*&gt;" />
+    <AlternativeType Name="stlpdmtx_std::multimap&lt;*&gt;" />
+    <AlternativeType Name="stlpdxmtx_std::multimap&lt;*&gt;" />
+    <AlternativeType Name="stlpd_std::set&lt;*&gt;" />
+    <AlternativeType Name="stlpdx_std::set&lt;*&gt;" />
+    <AlternativeType Name="stlpdmtx_std::set&lt;*&gt;" />
+    <AlternativeType Name="stlpdxmtx_std::set&lt;*&gt;" />
+    <AlternativeType Name="stlpd_std::multiset&lt;*&gt;" />
+    <AlternativeType Name="stlpdx_std::multiset&lt;*&gt;" />
+    <AlternativeType Name="stlpdmtx_std::multiset&lt;*&gt;" />
+    <AlternativeType Name="stlpdxmtx_std::multiset&lt;*&gt;" />
+    <DisplayString>{{ size = {_M_t._M_non_dbg_impl._M_node_count} }}</DisplayString>
+    <Expand>
+      <Item Name="[size]">_M_t._M_non_dbg_impl._M_node_count</Item>
+      <Item Name="[tree]">_M_t._M_non_dbg_impl</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="stlpmtx_std::priv::_Rb_tree&lt;*,*,*,*,*&gt;">
+    <AlternativeType Name="stlp_std::priv::_Rb_tree&lt;*,*,*,*,*&gt;" />
+    <AlternativeType Name="stlpx_std::priv::_Rb_tree&lt;*,*,*,*,*&gt;" />
+    <AlternativeType Name="stlpxmtx_std::priv::_Rb_tree&lt;*,*,*,*,*&gt;" />
+    <AlternativeType Name="stlpd_std::priv::_NonDbg_Rb_tree&lt;*,*,*,*,*&gt;" />
+    <AlternativeType Name="stlpdx_std::priv::_NonDbg_Rb_tree&lt;*,*,*,*,*&gt;" />
+    <AlternativeType Name="stlpdmtx_std::priv::_NonDbg_Rb_tree&lt;*,*,*,*,*&gt;" />
+    <AlternativeType Name="stlpdxmtx_std::priv::_NonDbg_Rb_tree&lt;*,*,*,*,*&gt;" />
+    <DisplayString>{*($T3 *)(&amp;(_M_header._M_data) + 1)}</DisplayString>
+    <Expand>
+      <TreeItems>
+        <Size>_M_node_count</Size>
+        <HeadPointer>_M_header._M_data._M_parent</HeadPointer>
+        <LeftPointer>_M_left</LeftPointer>
+        <RightPointer>_M_right</RightPointer>
+        <ValueNode>*($T3 *)(this + 1)</ValueNode>
+      </TreeItems>
+    </Expand>
+  </Type>
+
+  <Type Name="stlpmtx_std::priv::_Rb_tree_iterator&lt;*,*&gt;">
+    <AlternativeType Name="stlp_std::priv::_Rb_tree_iterator&lt;*,*&gt;" />
+    <AlternativeType Name="stlpx_std::priv::_Rb_tree_iterator&lt;*,*&gt;" />
+    <AlternativeType Name="stlpxmtx_std::priv::_Rb_tree_iterator&lt;*,*&gt;" />
+    <AlternativeType Name="stlpd_std::priv::_Rb_tree_iterator&lt;*,*&gt;" />
+    <AlternativeType Name="stlpdx_std::priv::_Rb_tree_iterator&lt;*,*&gt;" />
+    <AlternativeType Name="stlpdmtx_std::priv::_Rb_tree_iterator&lt;*,*&gt;" />
+    <AlternativeType Name="stlpdxmtx_std::priv::_Rb_tree_iterator&lt;*,*&gt;" />
+    <DisplayString>{*($T1 *)(_M_node + 1)}</DisplayString>
+    <Expand>
+      <Item Name="[ptr]">($T1 *)(_M_node + 1), x</Item>
+      <Item Name="[value]">*($T1 *)(_M_node + 1)</Item>
+    </Expand>
+  </Type>
+
+</AutoVisualizer>

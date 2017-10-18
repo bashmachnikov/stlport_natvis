@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+
+  <Type Name="stlpmtx_std::pair&lt;*,*&gt;">
+    <AlternativeType Name="stlp_std::pair&lt;*,*&gt;" />
+    <AlternativeType Name="stlpx_std::pair&lt;*,*&gt;" />
+    <AlternativeType Name="stlpxmtx_std::pair&lt;*,*&gt;" />
+    <AlternativeType Name="stlpd_std::pair&lt;*,*&gt;" />
+    <AlternativeType Name="stlpdx_std::pair&lt;*,*&gt;" />
+    <AlternativeType Name="stlpdmtx_std::pair&lt;*,*&gt;" />
+    <AlternativeType Name="stlpdxmtx_std::pair&lt;*,*&gt;" />
+    <DisplayString>({first}, {second})</DisplayString>
+    <Expand>
+      <Item Name="first">first</Item>
+      <Item Name="second">second</Item>
+    </Expand>
+  </Type>
+  <!--<Type Name="stlp_std::pair&lt;*,*&gt;">
+    <DisplayString>({first}, {second})</DisplayString>
+      <Expand>
+        <Item Name="first">first</Item>			
+		    <Item Name="second">second</Item>			
+      </Expand>
+  </Type>-->
+
+
+
+</AutoVisualizer>

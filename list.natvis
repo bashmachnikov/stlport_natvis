@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
-
-<Type Name="stlp_std::priv::_List_base&lt;*&gt;">
-	<DisplayString>{ (_M_node._M_data._M_next==&amp;_M_node._M_data)?0:($T1*)(_M_node._M_data._M_next+1) }</DisplayString>
-    <Expand>
-        <LinkedListItems>
+  
+  <Type Name="stlp_std::priv::_List_base&lt;*&gt;">
+	  <DisplayString>
+      ({ (_M_node._M_data._M_next==&amp;_M_node._M_data)?0:*($T1*)(_M_node._M_data._M_next+1) },{ (_M_node._M_data._M_next-&gt;_M_next==&amp;_M_node._M_data)?0:*($T1*)(_M_node._M_data._M_next-&gt;_M_next+1) },{ (_M_node._M_data._M_next-&gt;_M_next-&gt;_M_next==&amp;_M_node._M_data)?0:*($T1*)(_M_node._M_data._M_next-&gt;_M_next-&gt;_M_next+1) },"...")
+    </DisplayString>
+      <Expand>     
+        <LinkedListItems>                  
             <HeadPointer>_M_node._M_data._M_next</HeadPointer>
-            <NextPointer>_M_next</NextPointer>			
+            <!--<NextPointer>(_M_next==&amp;_M_node._M_data)?0:_M_next</NextPointer>-->
+            <NextPointer>_M_next</NextPointer>
             <ValueNode>($T1*)(_M_next+1)</ValueNode>			
         </LinkedListItems>
-    </Expand>
-</Type>
+      </Expand>
+  </Type>
 
-
-
-<Type Name="stlp_std::priv::_List_iterator_base&lt;*&gt;">
-	<DisplayString>{ this-&gt;_M_node+1 }</DisplayString>
+  <Type Name="stlp_std::priv::_List_iterator_base&lt;*&gt;">
+    <AlternativeType  Name="stlp_std::priv::_List_iterator&lt;*&gt;" />    
+    <DisplayString>{*($T1*)(_M_node+1)}</DisplayString>
     <Expand>
-        <Item Name="D">($T1*)(_M_node+1)</Item>			
-    </Expand>
-</Type>
+        <Item Name="v">($T1*)(_M_node+1)</Item>			
+    </Expand> 
+  </Type>
+
 
 
 </AutoVisualizer>
