@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+<Type Name="stlpmtx_std::bitset&lt;*&gt;">
+    <AlternativeType Name="stlp_std::bitset&lt;*&gt;" />
+    <AlternativeType Name="stlpx_std::bitset&lt;*&gt;" />
+    <AlternativeType Name="stlpxmtx_std::bitset&lt;*&gt;" />
+    <AlternativeType Name="stlpd_std::bitset&lt;*&gt;" />
+    <AlternativeType Name="stlpdx_std::bitset&lt;*&gt;" />
+    <AlternativeType Name="stlpdmtx_std::bitset&lt;*&gt;" />
+    <AlternativeType Name="stlpdxmtx_std::bitset&lt;*&gt;" />
+    <DisplayString>{{ size = {$T1} }}</DisplayString>
+    <Expand>
+        <IndexListItems Condition="_Words == 1">
+            <Size>$T1</Size>
+            <ValueNode>(((_WordT)_M_w) &gt;&gt; ($i % (sizeof(_WordT) * 8))) &amp; 1, d</ValueNode>
+        </IndexListItems>
+        <IndexListItems Condition="_Words &gt; 1">
+            <Size>$T1</Size>
+            <ValueNode>(((_WordT *)_M_w)[$i / (sizeof(_WordT) * 8)] &gt;&gt; ($i % (sizeof(_WordT) * 8))) &amp; 1, d</ValueNode>
+        </IndexListItems>
+    </Expand>
+</Type>
+
+<Type Name="stlpmtx_std::bitset&lt;0&gt;">
+    <AlternativeType Name="stlp_std::bitset&lt;0&gt;" />
+    <AlternativeType Name="stlpx_std::bitset&lt;0&gt;" />
+    <AlternativeType Name="stlpxmtx_std::bitset&lt;0&gt;" />
+    <AlternativeType Name="stlpd_std::bitset&lt;0&gt;" />
+    <AlternativeType Name="stlpdx_std::bitset&lt;0&gt;" />
+    <AlternativeType Name="stlpdmtx_std::bitset&lt;0&gt;" />
+    <AlternativeType Name="stlpdxmtx_std::bitset&lt;0&gt;" />
+    <DisplayString>{{ size = 0 }}</DisplayString>
+    <Expand>
+        <!-- raw view -->
+    </Expand>
+</Type>
+
+<Type Name="stlpmtx_std::bitset&lt;*&gt;::reference">
+    <AlternativeType Name="stlp_std::bitset&lt;*&gt;::reference" />
+    <AlternativeType Name="stlpx_std::bitset&lt;*&gt;::reference" />
+    <AlternativeType Name="stlpxmtx_std::bitset&lt;*&gt;::reference" />
+    <AlternativeType Name="stlpd_std::bitset&lt;*&gt;::reference" />
+    <AlternativeType Name="stlpdx_std::bitset&lt;*&gt;::reference" />
+    <AlternativeType Name="stlpdmtx_std::bitset&lt;*&gt;::reference" />
+    <AlternativeType Name="stlpdxmtx_std::bitset&lt;*&gt;::reference" />
+    <DisplayString>{(*(_M_wp) &gt;&gt; _M_bpos) &amp; 1, d}</DisplayString>
+    <Expand>
+        <Item Name="[pos]">_M_wp</Item>
+        <Item Name="[offset]">_M_bpos</Item>
+    </Expand>
+</Type>
+
+
+</AutoVisualizer>
