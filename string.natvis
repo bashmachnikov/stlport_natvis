@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+  <Type Name="stlp_std::priv::_String_base&lt;char,*&gt;">
+    <DisplayString>{{ size={_M_finish - _M_start_of_storage._M_data} }, {_M_start_of_storage._M_data} }</DisplayString>
+    <Expand>
+      <Item Name="[size]">_M_finish - _M_start_of_storage._M_data</Item>
+      <ArrayItems>
+        <Size>_M_finish - _M_start_of_storage._M_data</Size>
+        <ValuePointer>_M_start_of_storage._M_data</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+
+</AutoVisualizer>
