@@ -3,7 +3,10 @@
 <AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
 
   <Type Name="stlp_std::priv::_String_base&lt;char,*&gt;">
-    <DisplayString>{{ size={_M_finish - _M_start_of_storage._M_data} }, {_M_start_of_storage._M_data} }</DisplayString>
+    <AlternativeType Name="stlp_std::basic_string&lt;char,*&gt;" />
+    <AlternativeType Name="stlpx_std::basic_string&lt;char,*&gt;" />
+    <AlternativeType Name="stlpxmtx_std::basic_string&lt;char,*&gt;" />    
+    <DisplayString>[{_M_start_of_storage._M_data},{_M_finish - _M_start_of_storage._M_data}]</DisplayString>
     <Expand>
       <Item Name="[size]">_M_finish - _M_start_of_storage._M_data</Item>
       <ArrayItems>
@@ -12,5 +15,5 @@
       </ArrayItems>
     </Expand>
   </Type>
-
+ 
 </AutoVisualizer>

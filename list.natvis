@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
-  
-  <Type Name="stlp_std::priv::_List_base&lt;*&gt;">
-	  <DisplayString>
-      ({ (_M_node._M_data._M_next==&amp;_M_node._M_data)?0:*($T1*)(_M_node._M_data._M_next+1) },{ (_M_node._M_data._M_next-&gt;_M_next==&amp;_M_node._M_data)?0:*($T1*)(_M_node._M_data._M_next-&gt;_M_next+1) },{ (_M_node._M_data._M_next-&gt;_M_next-&gt;_M_next==&amp;_M_node._M_data)?0:*($T1*)(_M_node._M_data._M_next-&gt;_M_next-&gt;_M_next+1) },"...")
-    </DisplayString>
-      <Expand>     
-        <LinkedListItems>                  
-            <HeadPointer>_M_node._M_data._M_next</HeadPointer>
-            <!--<NextPointer>(_M_next==&amp;_M_node._M_data)?0:_M_next</NextPointer>-->
-            <NextPointer>_M_next</NextPointer>
-            <ValueNode>($T1*)(_M_next+1)</ValueNode>			
-        </LinkedListItems>
-      </Expand>
-  </Type>
 
+  <Type  Name="stlp_std::priv::_List_base&lt;*,*&gt;">
+    <AlternativeType  Name="stlp_std::list&lt;*,*&gt;" />
+	  <DisplayString>
+      ({ *($T1*)((_M_node._M_data._M_next==&amp;_M_node._M_data)?0:(_M_node._M_data._M_next+1)) },{ *($T1*)((_M_node._M_data._M_next-&gt;_M_next==&amp;_M_node._M_data)?0:($T1*)(_M_node._M_data._M_next-&gt;_M_next+1)) },{ *($T1*)((_M_node._M_data._M_next-&gt;_M_next-&gt;_M_next==&amp;_M_node._M_data)?0:(_M_node._M_data._M_next-&gt;_M_next-&gt;_M_next+1)) },"...")
+    </DisplayString>
+    <Expand>     
+      <LinkedListItems>                  
+          <HeadPointer>_M_node._M_data._M_next</HeadPointer>
+          <!--<NextPointer>(_M_next==&amp;_M_node._M_data)?0:_M_next</NextPointer>-->
+          <NextPointer>_M_next</NextPointer>
+          <ValueNode>((stlp_std::list&lt;$T1,$T2&gt;::_Node*)( _M_next ))-&gt;_M_data</ValueNode>        
+      </LinkedListItems>
+    </Expand>
+  </Type>
+  
   <Type Name="stlp_std::priv::_List_iterator_base&lt;*&gt;">
     <AlternativeType  Name="stlp_std::priv::_List_iterator&lt;*&gt;" />    
     <DisplayString>{*($T1*)(_M_node+1)}</DisplayString>
@@ -23,7 +24,5 @@
         <Item Name="v">($T1*)(_M_node+1)</Item>			
     </Expand> 
   </Type>
-
-
 
 </AutoVisualizer>
