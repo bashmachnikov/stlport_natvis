@@ -11,14 +11,14 @@ In  case I use list<int> and list<string>
     
   debugger will show </br>
   lint 1,2,3 .... </br>
-    1             </br>   
-    2             </br>   
+    1             </br>
+    2             </br>
     3             </br>
-    xxx           </br>    
-    1             </br>   
-    2             </br>    
-    3             </br>    
-    xx            </br>    
+    xxx           </br>
+    1             </br>
+    2             </br>
+    3             </br>
+    xx            </br>
     ...           </br>
     
   listr "1","2","3" ... </br>
